@@ -82,17 +82,16 @@ for ($i = 0; $i < $no_of_rows - 1; $i++) {
 echo "Start pattern : 7";
 echo '<br>';
 
-// Print first half.
-for ($i = 0; $i < $no_of_rows; $i++) { 
-    for ($j = 0; $j <= $i; $j++) { 
-        echo "*";
+// Print Row.
+for ($i = 0; $i < $no_of_rows; $i++) {
+    // Print spaces
+    for($k = $no_of_rows; $k > $i+1; $k-- ) {
+        echo "&nbsp;&nbsp;";
     }
-    echo '<br>';
-}
-// Print second half.
-for ($i = 0; $i < $no_of_rows - 1; $i++) { 
-    for ($j = $no_of_rows - 1; $j > $i; $j--) { 
-        echo "*";
+    // Print Stars.
+    for($j = 0; $j <= $i; $j++ ) {
+        echo "* ";
     }
-    echo '<br>';
+    // Go to new line after each row pattern is printed.
+    echo "<br>";
 }
